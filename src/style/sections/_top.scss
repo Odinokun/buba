@@ -125,21 +125,31 @@
   margin-bottom: 40px;
   color: #fff;
 
+  @include max(980) {
+    font-size: 24px;
+  }
   @include max(740) {
     font-size: 20px;
     margin-bottom: 25px;
     text-align: center;
   }
-
   span {
     font-family: $gilroy-bold;
     position: relative;
     display: inline-block;
+    padding-right: 80px;
+    background-image: url('../img/smiles.png');
+    background-repeat: no-repeat;
+    background-position: 100% 3px;
+    background-size: 65px 30px;
 
     @include max(740) {
       display: block;
       width: 220px;
-      margin: 0 auto;
+      margin: 0 auto -30px;
+      padding-right: 0;
+      padding-bottom: 40px;
+      background-position: 50% 100%;
     }
     &::before {
       position: absolute;
@@ -153,24 +163,11 @@
       background-repeat: no-repeat;
       background-position: 50% 0;
       background-size: contain;
-    }
-    &::after {
-      position: absolute;
-      top: 3px;
-      right: -80px;
-      width: 65px;
-      height: 30px;
-      content: '';
-      background-image: url('../img/smiles.png');
-      background-repeat: no-repeat;
-      background-position: 50% 0;
-      background-size: contain;
 
       @include max(740) {
-        right: 0;
-        bottom: -70px;
-        left: 0;
-        margin: auto;
+        bottom: 40px;
+        left: 20px;
+        width: 180px;
       }
     }
   }
