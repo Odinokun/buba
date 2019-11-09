@@ -1,17 +1,20 @@
 extends ../_template
 
 block variables
-  - var title       = 'Odinokun`s start template'
-  - var description = 'Odinokun`s start template'
-  - var ogtitle     = 'Odinokun`s start template'
-  - var ogimage     = 'assets/img/social.jpg'
+  - var title       = 'Bubo Unicus'
+  - var description = 'Bubo Unicus'
+  - var ogtitle     = 'Bubo Unicus'
 
 block content
-  .main-wrap.no-js.index
+  .main-wrap
     include ../sections/header
 
     //begin content
     main.main
+      include ../sections/top
+      include ../sections/video
+      include ../sections/program
+      include ../sections/teacher
     //end content
 
     include ../sections/footer
