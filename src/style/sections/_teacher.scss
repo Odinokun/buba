@@ -1,15 +1,35 @@
 .teacher {
-  background-image: url('../img/bg-teacher.jpg');
+  position: relative;
+  margin-top: -200px;
+  background-image: url('../img/bg-teacher.png');
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
 
   @include max(980) {
+    margin-top: -100px;
     background-color: #ca8495;
-    background-image: url('../img/bg-teacher-03.png'), url('../img/bg-teacher-04.png'), url('../img/bg-teacher-top.jpg');
-    background-repeat: repeat-y, repeat-y, no-repeat;
-    background-position: 0 0, 100% 50px, 50% 0;
-    background-size: auto, auto, auto;
+    background-image: url('../img/bg-teacher-03.png'), url('../img/bg-teacher-04.png');
+    background-repeat: repeat-y, repeat-y;
+    background-position: 0 0, 100% 50px;
+    background-size: auto, auto;
+  }
+  &::before {
+    position: absolute;
+    top: -100px;
+    right: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100px;
+    content: '';
+    background-image: url('../img/bg-teacher-top.png');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+
+    @include max(980) {
+      display: block;
+    }
   }
   .container {
     display: flex;
@@ -76,16 +96,21 @@
     margin-bottom: 30px;
   }
   span {
+    position: relative;
     display: inline-block;
-    width: 40px;
-    height: 40px;
-    margin-top: -5px;
-    margin-left: 15px;
-    transform: translateY(10px);
-    background-image: url('../img/100.png');
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: contain;
+    padding-right: 55px;
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      content: '';
+      background-image: url('../img/100.png');
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: contain;
+    }
   }
 }
 
@@ -133,5 +158,39 @@
     margin-top: 30px;
     margin-left: -25px;
     background-size: auto;
+  }
+}
+
+.teacher-test {
+  .teacher-banner__title {
+    font-size: 35px;
+    line-height: 45px;
+    max-width: 100%;
+    margin-bottom: 50px;
+    letter-spacing: -.1px;
+
+    @include max(740) {
+      font-size: 30px;
+      line-height: 1.2;
+      margin-bottom: 35px;
+    }
+    @include max(550) {
+      font-size: 25px;
+      margin-bottom: 30px;
+    }
+  }
+  .teacher-banner__list {
+    margin-bottom: 60px;
+  }
+  .teacher-banner__btn {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 35px;
+    span {
+      @include max(550) {
+        display: none;
+      }
+    }
   }
 }

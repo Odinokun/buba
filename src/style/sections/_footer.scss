@@ -1,19 +1,10 @@
 .footer {
-  //transform: translateY(-100%);
-  //display: flex;
-  //background-color: tomato;
   position: absolute;
-  top: auto;
-
-  //margin-top: auto;  left: 0;
-  //padding: 15px 0;
-  //
   right: 0;
   bottom: 0;
   left: 0;
-  //width: 100%;
+  width: 100%;
   background-color: transparent;
-  //z-index: 20;
   .container {
     display: flex;
     flex-wrap: wrap;
@@ -26,10 +17,10 @@
   font-family: $gilroy;
   font-size: 15px;
   font-weight: 400;
+  line-height: 1;
   display: inline-block;
   flex-wrap: nowrap;
   margin-bottom: 10px;
-  line-height: 1;
   padding: 0 10px;
   text-decoration: none;
   color: #969696;
