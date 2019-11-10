@@ -1,5 +1,6 @@
 .teacher {
   position: relative;
+  z-index: 1;
   margin-top: -200px;
   background-image: url('../img/bg-teacher.png');
   background-repeat: no-repeat;
@@ -10,7 +11,7 @@
     margin-top: -100px;
     background-color: #ca8495;
     background-image: url('../img/bg-teacher-03.png'), url('../img/bg-teacher-04.png');
-    background-repeat: repeat-y, repeat-y;
+    background-repeat: no-repeat;
     background-position: 0 0, 100% 50px;
     background-size: auto, auto;
   }
@@ -162,6 +163,7 @@
 }
 
 .teacher-test {
+
   .teacher-banner__title {
     font-size: 35px;
     line-height: 45px;
