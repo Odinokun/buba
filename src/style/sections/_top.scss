@@ -7,12 +7,30 @@
   background-size: auto, cover;
 
   @include max(980) {
-    background-image: url('../img/bg-top-3.png'),
-    url('../img/bg-top-4.png'),
-    url('../img/bg-top--mobile.jpg');
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: 0 0, 100% 0, 50% 100%;
-    background-size: auto, auto, cover;
+    background-image: url('../img/bg-top--mobile.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    background-size: cover;
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    margin: auto;
+    content: '';
+    pointer-events: none;
+    opacity: .3;
+    background-image: url('../img/bg-top-3.png'), url('../img/bg-top-4.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0 0, 100% 0;
+    background-size: auto, auto;
+
+    @include max(980) {
+      display: block;
+    }
   }
   .container {
     padding-top: 145px;

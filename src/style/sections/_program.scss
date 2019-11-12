@@ -7,12 +7,28 @@
 }
 
 .program__body {
+  position: relative;
   padding-top: 10px;
   padding-bottom: 230px;
   background-color: #e6e3f8;
-  background-image: url('../img/bg-project-01.png'), url('../img/bg-project-02.png');
-  background-repeat: no-repeat, no-repeat;
-  background-position: 0 70px, 100% 70px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    content: '';
+    pointer-events: none;
+    background-image: url('../img/bg-project-01.png'), url('../img/bg-project-02.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0 70px, 100% 70px;
+
+    @include max(980) {
+      opacity: .4;
+    }
+  }
 }
 
 .program__title {

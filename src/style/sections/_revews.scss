@@ -24,6 +24,10 @@
     background-image: url('../img/bg-reviews-2.png'), url('../img/bg-reviews-3.png');
     background-repeat: no-repeat;
     background-position: 40px 0, calc(100% - 40px) 0;
+
+    @include max(980) {
+      opacity: .5;
+    }
   }
   &::after {
     position: absolute;
@@ -37,6 +41,10 @@
     background-image: url('../img/bg-reviews-4.png');
     background-repeat: no-repeat;
     background-position: 50% 100%;
+
+    @include max(980) {
+      opacity: .5;
+    }
   }
 }
 

@@ -10,10 +10,27 @@
   @include max(980) {
     margin-top: -100px;
     background-color: #ca8495;
+    background-image: none;
+  }
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    margin: auto;
+    content: '';
+    pointer-events: none;
+    opacity: .3;
     background-image: url('../img/bg-teacher-03.png'), url('../img/bg-teacher-04.png');
     background-repeat: no-repeat;
     background-position: 0 0, 100% 50px;
     background-size: auto, auto;
+
+    @include max(980) {
+      display: block;
+    }
   }
   &::before {
     position: absolute;
@@ -163,7 +180,6 @@
 }
 
 .teacher-test {
-
   .teacher-banner__title {
     font-size: 35px;
     line-height: 45px;

@@ -18,6 +18,10 @@
     background-image: url('../img/bg-test-top-1.png'), url('../img/bg-test-top-2.png');
     background-repeat: no-repeat, no-repeat;
     background-position: 0 0, 100% 0;
+
+    @include max(740) {
+      opacity: .2;
+    }
   }
   .container {
     position: relative;
@@ -34,7 +38,7 @@
 
 .test-banner {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
